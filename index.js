@@ -12,7 +12,8 @@ app.get('/', function(req, res) {
 
 app.get('/change', function(req, res) {
     board.on("ready", function() {
-        var led = new five.Led({ pin: 13, board: board });
+        //var led = new five.Led({ pin: 13, board: board });
+        var led = new five.Led(13);
         led.toggle();
         res.redirect('/');
     });
